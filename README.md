@@ -5,5 +5,8 @@ An individual project to reverse-engineer [stopwatch.net](https://stopwatch.net/
 2. using Promises
 3. using `async` and `await`
 
+
+
+
 Inspired by https://advancedweb.hu/how-to-add-timeout-to-a-promise-in-javascript/
 
