@@ -1,44 +1,292 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "IBM Plex Sans", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400&display=swap");
+@import url("https://rsms.me/inter/inter.css");
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #f2f4f6;
+  background: #eff1f4;
+  font-family: "Inter", sans-serif;
 }
-.wrapper {
-  width: 400px;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
-  border: 1px solid rgb(64 64 64 / 5%);
-}
-div#stopwatch {
-  font-size: 50px;
-  line-height: 60px;
+header {
   text-align: center;
-  padding: 0 0 50px 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: #007fff;
 }
-ul#buttons {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header img {
+  width: 130px;
 }
-ul#buttons button {
-  background: #0f62fe;
-  border: transparent;
-  width: 100px;
-  color: #fff;
-  font-size: 18px;
-  text-align: left;
+.main-cont {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 35px 55px 0 rgba(0, 0, 0, 0.05);
+  margin-top: -54px;
+  padding-bottom: 20px;
+}
+.tab-menu {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.tab-menu .item {
+  display: inline-block;
+}
+.tab-menu .item a {
+  margin: 0 5px;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #797f89;
+  transition: color 0.2s ease-in;
+}
+.tab-menu .item a:hover {
+  text-decoration: none;
+  color: #61666e;
+}
+.tab-menu .active-item a {
+  color: #007fff;
+  font-weight: 600;
+  border-bottom: 2px solid #007fff;
+}
+.tab-menu .active-item-pomodoro a {
+  color: #cf4c48;
+  font-weight: 600;
+  border-bottom: 2px solid #cf4c48;
+}
+.tab-menu .active-item a:hover {
+  text-decoration: none;
+  color: #06c;
+}
+.stopw-cont {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.stopw-cont .unit {
+  display: inline-block;
+  margin: 70px 15px;
+}
+.stopw-cont .unit h2 {
+  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  font-size: 50px;
+  font-weight: 300;
+  color: #383e47;
+}
+.stopw-cont .unit label {
+  margin-left: 5px;
+  font-size: 15px;
+  color: #383e47;
+}
+.btn-wrap {
   display: block;
-  padding: 10px 0 10px 20px;
+}
+.main-presets .btn {
+  padding: 8px 40px;
+  border-radius: 3px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px 5px;
+  background: #fff;
+}
+.secondary-presets .btn {
+  width: 100%;
+  border-radius: 3px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px 5px;
+  background: #fff;
+}
+.btn-wrap .btn:focus {
+  outline: none;
+}
+.btn-wrap #btn-toggle {
+  background: #e5f2ff;
+  color: #007fff;
+}
+.btn-pomodoro {
+  background: #ffcfcd !important;
+  color: #cf4c48 !important;
+}
+.btn-wrap .btn-short-break {
+  background: #e5f2ff;
+  color: #007fff;
+}
+.btn-wrap .btn-long-break {
+  background: #007fff;
+  color: #e5f2ff;
+}
+.btn-wrap .btn-preset {
+  color: #797f89;
+  border: 1px solid #e4e5e7;
+}
+.btn-wrap #btn-add-lap {
+  border: 1px solid #e5f2ff;
+  color: #007fff;
+}
+.btn-wrap #btn-reset {
+  color: #797f89;
+  border: 1px solid #e4e5e7;
+}
+.laps {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.laps #laps-header {
+  font-size: 13px;
+  color: #797f89;
+}
+.laps #lap-info {
+  font-size: 12px;
+  color: #9da3ac;
+}
+.laps ul {
+  padding-left: 0px;
+  list-style: none;
+}
+.laps li {
+  font-family: "Roboto Mono", monospace;
+  color: #545b65;
+  padding: 10px 0px;
+}
+.laps li:nth-child(odd) {
+  background: #fbfcfe;
+}
+footer {
+  padding: 20px 0;
+  margin-top: 100px;
+  background: #fff;
+}
+footer .footer-logo {
+  display: inline-block;
+}
+footer .footer-logo img {
+  height: 35px;
+}
+footer .footer-items {
+  display: inline-block;
+  float: right;
+}
+footer .footer-items a {
+  color: #a3aab2;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-left: 25px;
+}
+.timer-input {
+  text-align: center;
+  margin: 30px 0;
+}
+.secondary-presets {
+  text-align: left;
+  margin: 0;
+}
+.timer-input label {
+  font-size: 13px;
+  color: #797f89;
+  margin-bottom: 10px;
+}
+.timer-input #set {
+  margin-top: 30px;
+  padding: 10px 45px;
+  border-radius: 3px;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #535962;
+  border: none;
   cursor: pointer;
+  background: #fff;
+  border: 1px solid #e0e4e9;
+}
+.timer-input .full-input {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  background: #f9fafd;
+}
+.timer-input .full-input label {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 10px;
+}
+.timer-input input {
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  background: #f9fafd;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  width: 80px;
+}
+.timer-input input:focus {
+  outline: none;
+}
+.notification-permission {
+  padding: 10px 0px;
+  background: #ffcc91;
+  font-size: 14px;
+  color: #a76c29;
+  text-align: center;
+  display: none;
+}
+.notification-permission a {
+  color: #a76c29;
+  font-weight: 600;
+}
+.timer-stopw-cont {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+}
+.timer-stopw-cont .unit {
+  margin: 40px 15px;
+}
+@media screen and (max-width: 540px) {
+  .stopw-cont {
+    margin: 30px 10px;
+  }
+  .stopw-cont .unit {
+    margin: 10px !important;
+  }
+  .stopw-cont .unit h2 {
+    font-size: 30px;
+  }
+  .btn-wrap {
+    margin-top: 30px;
+  }
+  .timer-stopw-cont .unit {
+    margin-top: 40px !important;
+  }
+}
+.privacy h1 {
+  font-size: 26px;
+}
+.privacy h2 {
+  font-size: 22px;
+}
+#presets-title {
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  margin: 30px 0 0 0;
+}
+#presets-title-pomodoro {
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  margin: 30px 0 0 0;
+  color: #cf4c48;
+}
+.pomodoro-header {
+  background-color: #cf4c48;
+}
+.content p {
+  font-size: 17px;
+  color: #383e47;
+}
+.content-list a {
+  display: inline-block;
+  margin-right: 20px;
 }
